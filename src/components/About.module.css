@@ -1,0 +1,115 @@
+.aboutSection {
+  padding: 8rem 0;
+  position: relative;
+  background-color: var(--surface-color);
+  border-bottom: 1px solid var(--surface-border);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.label {
+  font-family: var(--font-inter);
+  color: var(--accent-color);
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.header h2 {
+  margin-bottom: 0;
+}
+
+.headerLine {
+  height: 1px;
+  flex-grow: 1;
+  background: var(--surface-border);
+  max-width: 300px;
+}
+
+.contentCard {
+  background: var(--bg-color);
+  border: 1px solid var(--surface-border);
+  border-radius: 20px;
+  padding: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+}
+
+.textContainer p {
+  margin-bottom: 1.8rem;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  font-weight: 300;
+}
+
+.textContainer p:last-child {
+  margin-bottom: 0;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  aspect-ratio: 4/5;
+  background: var(--surface-border);
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  z-index: 2;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  animation: subtleLift 6s ease-in-out infinite alternate;
+}
+
+@keyframes subtleLift {
+  to { transform: translateY(-10px); }
+  from { transform: translateY(0); }
+}
+
+.imageBackdrop {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  right: -1.5rem;
+  bottom: -1.5rem;
+  background: var(--accent-secondary);
+  border-radius: 16px;
+  z-index: 1;
+  opacity: 0.2;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.imageContainer:hover .imagePlaceholder {
+  transform: translate(-0.8rem, -0.8rem) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  animation-play-state: paused;
+}
+
+.imageContainer:hover .imageBackdrop {
+  transform: translate(0.8rem, 0.8rem);
+  opacity: 0.4;
+}
+
+@media (max-width: 900px) {
+  .contentCard {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    padding: 3rem 2rem;
+  }
+  
+  .imageContainer {
+    grid-row: 1;
+  }
+}

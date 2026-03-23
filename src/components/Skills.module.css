@@ -1,0 +1,126 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.label {
+  font-family: var(--font-inter);
+  color: var(--accent-color);
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.header h2 {
+  margin-bottom: 0;
+}
+
+.bentoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.categoryCard {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  padding: 3rem;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+}
+
+.categoryCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06), inset 0 0 0 1px rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(186, 178, 169, 0.2);
+}
+
+.icon {
+  font-size: 1.5rem;
+  background: linear-gradient(135deg, rgba(201, 195, 230, 0.4) 0%, rgba(186, 218, 232, 0.4) 100%);
+  width: 54px;
+  height: 54px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.categoryTitle {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.skillList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.skillItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.skillBullet {
+  width: 6px;
+  height: 6px;
+  background-color: var(--accent-tertiary);
+  border-radius: 50%;
+  margin-top: 0.55rem;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 4px rgba(186, 218, 232, 0.2);
+}
+
+.categoryCard:nth-child(1) .skillBullet {
+  background-color: var(--accent-color);
+  box-shadow: 0 0 0 4px rgba(191, 169, 146, 0.2);
+}
+
+.categoryCard:nth-child(2) .skillBullet {
+  background-color: var(--accent-secondary);
+  box-shadow: 0 0 0 4px rgba(201, 195, 230, 0.2);
+}
+
+.skillTextGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.skillName {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.skillDesc {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .categoryCard {
+    padding: 2rem;
+  }
+}
