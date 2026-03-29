@@ -26,9 +26,9 @@ export default function About() {
               and turn complex analytics into clear, actionable insights.
             </p>
             <p>
-              When I'm not running GA4 simulations or building out Google Ads plans, you can find me 
-              exploring the Gothic Quarter, keeping up with the latest marketing trends, or 
-              hunting down the best matcha latte in the city!
+              When I'm not diving into campaign data or exploring new marketing tools, you can find me 
+              exploring Barcelona, keeping up with the latest digital marketing trends, or 
+              hunting down the best matcha latte in the city.
             </p>
           </div>
           <div className={styles.imageContainer}>

@@ -14,7 +14,7 @@ export default function Contact() {
           </p>
           
           <div className={styles.buttonGroup}>
-            <a href="mailto:ebru.sakar@example.com" className="btn btn-primary">
+            <a href="mailto:ebrussakar@gmail.com" className="btn btn-primary">
               Send an Email
             </a>
             <a href="https://www.linkedin.com/in/ebrussakar" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">

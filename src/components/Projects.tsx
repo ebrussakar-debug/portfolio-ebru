@@ -3,25 +3,11 @@ import styles from './Projects.module.css';
 
 const projects = [
   {
-    title: 'SEO & Performance Setup for a Digital Marketing Agency (Case Study)',
-    category: 'SEO & Performance',
-    description: 'Conducted a basic SEO audit, structured a simple Google Ads campaign plan, and set up a GA4 tracking simulation to analyze CTR, conversion rates, and ROAS as part of a hands-on learning project.',
-    tags: ['SEO Audit', 'Google Ads', 'GA4 Simulation'],
+    title: 'The True Reach — Digital Marketing Agency Project',
+    category: 'SEO & Performance Marketing',
+    description: 'Developed a digital marketing agency concept targeting language schools in the US market as part of my MSc program at TBS Education. Built a website using HubSpot, conducted keyword research using SEO tools, created SEO-optimized blog content, configured a Google Ads search campaign, and integrated Google Analytics 4 for performance tracking.',
+    tags: ['HubSpot', 'Google Ads', 'GA4', 'SEO', 'Keyword Research'],
     featured: true
-  },
-  {
-    title: 'E-commerce Analytics Basics',
-    category: 'Coursework',
-    description: 'Configured a foundational GA4 setup for a mock e-commerce store during my Master\'s program. Built simple funnels to track add-to-cart clicks and checkout drop-offs.',
-    tags: ['Analytics', 'Data Tracking'],
-    featured: false
-  },
-  {
-    title: 'B2B Social Media Content Plan',
-    category: 'Marketing Strategy',
-    description: 'Developed a mock B2B content calendar and analyzed competitor social strategies to propose a structured LinkedIn-focused approach.',
-    tags: ['Content Strategy', 'Competitor Analysis'],
-    featured: false
   }
 ];
 
