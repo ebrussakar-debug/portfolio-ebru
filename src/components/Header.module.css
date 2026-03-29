@@ -4,11 +4,16 @@
   left: 50%;
   transform: translateX(-50%);
   width: 90%;
-  max-width: 700px;
+  max-width: 780px;
   z-index: 1000;
-  padding: 1rem 2rem;
+  padding: 0.9rem 2rem;
   transition: all 0.3s ease;
-  border-radius: 8px; /* Softer radius for luxury feel */
+  border-radius: 100px;
+  background: rgba(15, 15, 26, 0.7);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4), inset 0 0 0 1px rgba(167,139,250,0.08);
 }
 
 .container {
@@ -18,27 +23,31 @@
 }
 
 .logo {
-  font-weight: 500;
-  font-size: 1rem;
-  letter-spacing: 0.05em;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
 }
 
 .logo a {
-  color: var(--text-primary);
+  background: linear-gradient(135deg, #c4b5fd, #93c5fd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .nav {
   display: flex;
-  gap: 2.5rem;
+  gap: 2.2rem;
 }
 
 .nav a {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: var(--text-secondary);
   font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
+  transition: color 0.25s ease;
 }
 
 .nav a:hover {
@@ -46,7 +55,5 @@
 }
 
 @media (max-width: 768px) {
-  .nav {
-    display: none;
-  }
+  .nav { display: none; }
 }

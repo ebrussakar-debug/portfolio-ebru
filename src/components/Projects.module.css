@@ -23,15 +23,15 @@
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255,255,255,0.04);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 24px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
 }
 
 .featuredCard {
@@ -54,21 +54,21 @@
 
 .cardVisual {
   width: 50%;
-  background: radial-gradient(circle at center, rgba(186, 218, 232, 0.3) 0%, rgba(201, 195, 230, 0.1) 100%);
+  background: radial-gradient(circle at center, rgba(139,92,246,0.15) 0%, rgba(96,165,250,0.08) 100%);
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   overflow: hidden;
-  border-left: 1px solid rgba(255, 255, 255, 0.6);
+  border-left: 1px solid rgba(255,255,255,0.06);
 }
 
 .visualPlaceholder {
   width: 75%;
   height: 65%;
-  background: var(--surface-color);
+  background: rgba(255,255,255,0.04);
   border-radius: 20px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.4);
   position: relative;
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   overflow: hidden;
@@ -76,15 +76,16 @@
 }
 
 @keyframes slowFloat {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-15px); }
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-15px); }
   100% { transform: translateY(0px); }
 }
 
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06), inset 0 0 0 1px rgba(255, 255, 255, 0.9);
-  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 24px 48px rgba(0,0,0,0.4);
+  border-color: rgba(167,139,250,0.2);
+  background: rgba(255,255,255,0.06);
 }
 
 .card:hover .visualPlaceholder {
@@ -96,7 +97,7 @@
   font-family: var(--font-inter);
   color: var(--accent-color);
   font-size: 0.75rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 1rem;
@@ -130,35 +131,27 @@
 }
 
 .tag {
-  font-size: 0.75rem;
-  padding: 0.4rem 1rem;
-  color: var(--text-secondary);
-  border: 1px solid var(--surface-border);
+  font-size: 0.72rem;
+  padding: 0.35rem 0.9rem;
+  color: var(--accent-color);
+  border: 1px solid rgba(167,139,250,0.25);
   border-radius: 50px;
   font-family: var(--font-inter);
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  background: var(--bg-color);
+  background: rgba(167,139,250,0.08);
+  transition: all 0.25s ease;
+}
+
+.tag:hover {
+  background: rgba(167,139,250,0.18);
+  border-color: rgba(167,139,250,0.5);
 }
 
 @media (max-width: 900px) {
-  .bentoGrid {
-    grid-template-columns: 1fr;
-  }
-  
-  .featuredCard {
-    flex-direction: column;
-  }
-  
-  .featuredCard .cardContent, .cardVisual {
-    width: 100%;
-  }
-  
-  .cardVisual {
-    min-height: 250px;
-  }
-  
-  .cardContent {
-    padding: 2rem;
-  }
+  .bentoGrid { grid-template-columns: 1fr; }
+  .featuredCard { flex-direction: column; }
+  .featuredCard .cardContent, .cardVisual { width: 100%; }
+  .cardVisual { min-height: 250px; }
+  .cardContent { padding: 2rem; }
 }

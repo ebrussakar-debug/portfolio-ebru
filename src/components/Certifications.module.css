@@ -26,22 +26,23 @@
 
 /* ── Card base ────────────────────────────── */
 .card {
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255,255,255,0.04);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 20px;
   padding: 2rem 2rem;
   display: flex;
   align-items: center;
   gap: 1.4rem;
   transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
 }
 
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.07), inset 0 0 0 1px rgba(255, 255, 255, 0.9);
-  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+  border-color: rgba(167,139,250,0.2);
+  background: rgba(255,255,255,0.07);
 }
 
 /* ── Icon ─────────────────────────────────── */
@@ -53,16 +54,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(255, 255, 255, 0.8);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.2);
 }
 
 .google .iconWrap {
-  background: linear-gradient(135deg, rgba(186, 218, 232, 0.45) 0%, rgba(201, 195, 230, 0.35) 100%);
+  background: linear-gradient(135deg, rgba(96,165,250,0.25) 0%, rgba(167,139,250,0.2) 100%);
 }
 
 .hubspot .iconWrap {
-  background: linear-gradient(135deg, rgba(255, 122, 89, 0.18) 0%, rgba(255, 165, 128, 0.15) 100%);
+  background: linear-gradient(135deg, rgba(251,146,60,0.22) 0%, rgba(244,114,182,0.18) 100%);
 }
 
 .icon {
@@ -78,7 +79,7 @@
 }
 
 .certName {
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   font-weight: 500;
   color: var(--text-primary);
   margin: 0;
@@ -88,7 +89,7 @@
 /* ── Issuer badge ─────────────────────────── */
 .issuerBadge {
   display: inline-block;
-  font-size: 0.72rem;
+  font-size: 0.70rem;
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -97,24 +98,19 @@
 }
 
 .badge_google {
-  background: rgba(186, 218, 232, 0.35);
-  color: #4a7fa5;
-  border: 1px solid rgba(186, 218, 232, 0.6);
+  background: rgba(96,165,250,0.12);
+  color: #93c5fd;
+  border: 1px solid rgba(96,165,250,0.25);
 }
 
 .badge_hubspot {
-  background: rgba(255, 122, 89, 0.12);
-  color: #c85c3a;
-  border: 1px solid rgba(255, 122, 89, 0.3);
+  background: rgba(251,146,60,0.12);
+  color: #fdba74;
+  border: 1px solid rgba(251,146,60,0.25);
 }
 
 /* ── Responsive ───────────────────────────── */
 @media (max-width: 768px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .card {
-    padding: 1.5rem;
-  }
+  .grid { grid-template-columns: 1fr; }
+  .card { padding: 1.5rem; }
 }
