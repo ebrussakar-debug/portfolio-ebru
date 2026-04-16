@@ -174,8 +174,9 @@
 .visualComposition {
   position: relative;
   width: 100%;
-  height: 640px;
+  height: 500px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -199,219 +200,94 @@
   100% { opacity: 1;   transform: translate(-50%, -50%) scale(1.15); }
 }
 
-/* ── Floating cards ──────────────────── */
-.floatingCard {
+/* ── Floating Tags ──────────────────── */
+.floatingTag {
   position: absolute;
-  background: rgba(255,255,255,0.07);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 20px;
-  padding: 1.3rem 1.5rem;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 50px;
+  padding: 0.6rem 1.2rem;
   display: flex;
-  flex-direction: column;
-  gap: 0.9rem;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.25), inset 0 0 0 1px rgba(255,255,255,0.06);
+  align-items: center;
+  gap: 0.6rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15), inset 0 0 0 1px rgba(255,255,255,0.05);
   z-index: 1;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-  min-width: 170px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.9);
+  white-space: nowrap;
 }
 
-.floatingCard:hover {
-  transform: translateY(-6px) scale(1.03) !important;
-  box-shadow: 0 28px 56px rgba(0,0,0,0.35), inset 0 0 0 1px rgba(255,255,255,0.15);
+.floatingTag:hover {
+  transform: translateY(-4px) scale(1.05) !important;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25), inset 0 0 0 1px rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.08);
   z-index: 10;
 }
 
-.cardIcon {
-  width: 36px;
-  height: 36px;
-  border-radius: 10px;
+.tagIcon {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
 }
 
-.cardIcon svg {
-  width: 18px;
-  height: 18px;
-}
-
-.cardText {
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-}
-
-.cardTitle {
-  font-size: 0.82rem;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  color: rgba(255,255,255,0.85);
-}
-
-/* ── Individual cards ────────────────── */
-
-/* Card 1 – Data Analysis (top-left) */
-.cardData {
-  top: 10%;
-  left: 3%;
-  animation: float 6s ease-in-out infinite;
-}
-.cardData .cardIcon {
-  background: linear-gradient(135deg, #7c3aed, #a78bfa);
-  box-shadow: 0 4px 14px rgba(124,58,237,0.4);
-}
-
-/* Card 2 – Google Ads (top-right) */
-.cardGoogleAds {
-  top: 6%;
-  right: 8%;
-  animation: float 7s ease-in-out infinite 1.2s reverse;
-}
-.cardGoogleAds .cardIcon {
-  background: linear-gradient(135deg, #2563eb, #60a5fa);
-  box-shadow: 0 4px 14px rgba(37,99,235,0.4);
-}
-
-/* Card 3 – SEO (middle-right) */
-.cardSeo {
-  top: 45%;
-  right: 0%;
-  animation: float 7.5s ease-in-out infinite 0.8s;
-}
-.cardSeo .cardIcon {
-  background: linear-gradient(135deg, #059669, #34d399);
-  box-shadow: 0 4px 14px rgba(5,150,105,0.4);
-}
-
-/* Card 4 – Campaign ROI (bottom-left) */
-.cardRoi {
-  bottom: 12%;
-  left: 15%;
-  animation: float 8s ease-in-out infinite 0.4s;
-}
-.cardRoi .cardIcon {
-  background: linear-gradient(135deg, #d97706, #fbbf24);
-  box-shadow: 0 4px 14px rgba(217,119,6,0.4);
-}
-
-/* Card 5 – Analytics (middle-left) */
-.cardAnalytics {
-  top: 48%;
-  left: 0%;
-  animation: float 6.5s ease-in-out infinite 2s reverse;
-}
-.cardAnalytics .cardIcon {
-  background: linear-gradient(135deg, #db2777, #f472b6);
-  box-shadow: 0 4px 14px rgba(219,39,119,0.4);
-}
-
-/* Card 6 – Performance (bottom-right) */
-.cardPerformance {
-  bottom: 10%;
-  right: 5%;
-  animation: float 9s ease-in-out infinite 1.8s;
-}
-.cardPerformance .cardIcon {
-  background: linear-gradient(135deg, #7c3aed, #ec4899);
-  box-shadow: 0 4px 14px rgba(124,58,237,0.4);
+.tagIcon svg {
+  width: 14px;
+  height: 14px;
+  color: white;
 }
 
 @keyframes float {
   0%   { transform: translateY(0px); }
-  50%  { transform: translateY(-14px); }
+  50%  { transform: translateY(-10px); }
   100% { transform: translateY(0px); }
 }
 
-/* ── Card micro-visuals ──────────────── */
-.miniChart {
-  display: flex;
-  align-items: flex-end;
-  gap: 4px;
-  height: 28px;
+/* Individual Tags Positioning */
+.tagSeo {
+  top: 15%;
+  left: 5%;
+  animation: float 6s ease-in-out infinite;
+}
+.tagSeo .tagIcon {
+  background: linear-gradient(135deg, #059669, #34d399);
+  box-shadow: 0 4px 10px rgba(5,150,105,0.3);
 }
 
-.bar {
-  width: 8px;
-  border-radius: 2px 2px 0 0;
-  background: linear-gradient(to top, rgba(167,139,250,0.4), rgba(167,139,250,0.9));
+.tagAds {
+  top: 35%;
+  right: -5%;
+  animation: float 7s ease-in-out infinite 1.2s reverse;
+}
+.tagAds .tagIcon {
+  background: linear-gradient(135deg, #2563eb, #60a5fa);
+  box-shadow: 0 4px 10px rgba(37,99,235,0.3);
 }
 
-.seoScore {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
+.tagAnalytics {
+  bottom: 35%;
+  left: 0%;
+  animation: float 6.5s ease-in-out infinite 2s;
+}
+.tagAnalytics .tagIcon {
+  background: linear-gradient(135deg, #db2777, #f472b6);
+  box-shadow: 0 4px 10px rgba(219,39,119,0.3);
 }
 
-.scoreCircle {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  border: 2.5px solid #34d399;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: #34d399;
+.tagGeo {
+  bottom: 15%;
+  right: 5%;
+  animation: float 8s ease-in-out infinite 0.5s reverse;
 }
-
-.scoreLabel {
-  font-size: 0.72rem;
-  color: rgba(255,255,255,0.45);
-}
-
-.metricRow {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 0.5rem;
-}
-
-.metricLabel {
-  font-size: 0.72rem;
-  color: rgba(255,255,255,0.45);
-}
-
-.metricValue {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: rgba(255,255,255,0.9);
-}
-
-.trendUp {
-  font-size: 0.75rem;
-  color: #34d399;
-  font-weight: 600;
-}
-
-.adsBadge {
-  display: inline-block;
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-  padding: 0.2rem 0.5rem;
-  border-radius: 4px;
-  background: rgba(96,165,250,0.2);
-  color: #93c5fd;
-  border: 1px solid rgba(96,165,250,0.3);
-}
-
-.analyticsBar {
-  width: 100%;
-  height: 5px;
-  border-radius: 999px;
-  background: rgba(255,255,255,0.1);
-  overflow: hidden;
-}
-.analyticsBarFill {
-  height: 100%;
-  border-radius: 999px;
-  background: linear-gradient(90deg, #f472b6, #a78bfa);
-  width: 72%;
+.tagGeo .tagIcon {
+  background: linear-gradient(135deg, #7c3aed, #a78bfa);
+  box-shadow: 0 4px 10px rgba(124,58,237,0.3);
 }
 
 /* ── Responsive ──────────────────────── */
@@ -429,17 +305,46 @@
     text-align: center;
   }
   .actions { justify-content: center; }
-  .visualComposition { height: 480px; max-width: 100%; }
-  .cardData      { top: 5%;  left: 0%; }
-  .cardGoogleAds { top: 2%;  right: 5%; }
-  .cardSeo       { top: 40%; right: 0%; }
-  .cardRoi       { bottom: 0%; left: 10%; }
-  .cardAnalytics { top: 45%; left: 0%; }
-  .cardPerformance { bottom: 2%; right: 5%; }
+  
+  .visualComposition {
+    height: auto;
+    min-height: 260px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    gap: 1.2rem;
+    padding: 2rem 0;
+  }
+  
+  .floatingTag {
+    position: relative;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    animation: float 5s ease-in-out infinite;
+  }
+  
+  .floatingTag:nth-child(even) {
+    animation-delay: 1.5s;
+    animation-direction: reverse;
+  }
 }
 
 @media (max-width: 600px) {
   .actions { flex-direction: column; width: 100%; }
   .actions a { width: 100%; }
-  .visualComposition { height: 420px; transform: scale(0.82); }
+  
+  .floatingTag {
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
+    white-space: normal;
+    text-align: left;
+  }
+  
+  .visualComposition { 
+    transform: none; 
+    gap: 0.8rem;
+  }
 }

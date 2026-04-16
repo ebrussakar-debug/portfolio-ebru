@@ -10,6 +10,7 @@ export default function Header() {
         </div>
         <nav className={styles.nav}>
           <Link href="#about">About</Link>
+          <Link href="#experience">Experience</Link>
           <Link href="#projects">Projects</Link>
           <Link href="#skills">Skills</Link>
           <Link href="#certifications">Certifications</Link>

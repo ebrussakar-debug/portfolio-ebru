@@ -41,6 +41,19 @@
   background: rgba(255,255,255,0.07);
 }
 
+/* Featured card — SEO & Search */
+.featuredCard {
+  border-color: rgba(167,139,250,0.25);
+  background: rgba(139,92,246,0.06);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25), 0 0 0 1px rgba(167,139,250,0.1);
+}
+
+.featuredCard:hover {
+  border-color: rgba(167,139,250,0.4);
+  background: rgba(139,92,246,0.1);
+  box-shadow: 0 24px 48px rgba(0,0,0,0.35), 0 0 40px rgba(167,139,250,0.08);
+}
+
 .cardHeader {
   display: flex;
   align-items: center;
@@ -120,6 +133,71 @@
   line-height: 1.4;
 }
 
+/* ── GEO Callout ─────────────────────── */
+.geoCallout {
+  margin-top: 3.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.8rem;
+  padding: 2.5rem 3rem;
+  background: linear-gradient(135deg, rgba(139,92,246,0.08) 0%, rgba(96,165,250,0.06) 100%);
+  border: 1px solid rgba(167,139,250,0.2);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.geoCallout:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  border-color: rgba(167,139,250,0.35);
+}
+
+.geoIcon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #7c3aed, #a78bfa);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(124,58,237,0.4);
+}
+
+.geoContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.geoTitle {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 0;
+  background: linear-gradient(135deg, #c4b5fd, #93c5fd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.geoText {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin: 0;
+  font-weight: 300;
+}
+
 @media (max-width: 768px) {
   .categoryCard { padding: 2rem; }
+  .geoCallout {
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.2rem;
+  }
 }

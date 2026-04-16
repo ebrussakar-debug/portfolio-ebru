@@ -14,8 +14,8 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Ebru Sakar | Portfolio",
-  description: "Digital Marketing and Analytics Master's student based in Barcelona.",
+  title: "Ebru Sakar — SEO, Paid Search & Digital Marketing Analytics",
+  description: "Portfolio of Ebru Sakar — MSc Digital Marketing & Analytics student specializing in SEO, Google Ads, and analytics. Based in Barcelona, available for internship.",
 };
 
 export default function RootLayout({

@@ -43,8 +43,8 @@ export default function Certifications() {
   return (
     <section id="certifications" className={`section container ${styles.section}`}>
       <div className={styles.header}>
-        <span className={styles.label}>04.</span>
-        <h2 className="section-title">Certifications</h2>
+        <span className={styles.label}>05.</span>
+        <h2 className="section-title">Licences & Certifications</h2>
       </div>
 
       <div className={styles.grid}>

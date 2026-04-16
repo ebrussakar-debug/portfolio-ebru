@@ -14,21 +14,13 @@ export default function About() {
         <div className={styles.contentCard}>
           <div className={styles.textContainer}>
             <p>
-              Hi, I'm Ebru. My academic journey began in International Trade and Business, 
-              which gave me a strong foundation in global markets and strategy. Over time, I realized 
-              I wanted to understand not just what makes a business competitive, but how to actually connect 
-              with consumers online—which led me to digital marketing.
+              Hi, I'm Ebru. My background is in International Trade and Business, which gave me a solid understanding of global markets and competitive strategy. Over time, I became more interested in how people actually discover brands and make decisions online — which led me to digital marketing.
             </p>
             <p>
-              I'm currently pursuing my Master's in Digital Marketing and Analytics in Barcelona. 
-              My coursework and hands-on projects are deeply focused on data-driven marketing, e-commerce, 
-              and performance marketing. I love learning how to analyze user behavior, structure campaigns, 
-              and turn complex analytics into clear, actionable insights.
+              I'm currently pursuing my Master's in Digital Marketing and Analytics at TBS Education in Barcelona. My focus areas are SEO, paid search (Google Ads), and performance analytics. I'm also exploring GEO — Generative Engine Optimization — which looks at how brands can stay visible as AI-driven search experiences reshape the way people find information.
             </p>
             <p>
-              When I'm not diving into campaign data or exploring new marketing tools, you can find me 
-              exploring Barcelona, keeping up with the latest digital marketing trends, or 
-              hunting down the best matcha latte in the city.
+              When I'm not researching keywords or analyzing search data, you'll find me exploring Barcelona, keeping up with the latest in search and AI, or hunting down the best matcha latte in the city.
             </p>
           </div>
           <div className={styles.imageContainer}>

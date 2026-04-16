@@ -5,11 +5,11 @@ export default function Contact() {
     <section id="contact" className={styles.contactSection}>
       <div className={`container ${styles.container}`}>
         <div className={styles.contentBox}>
-          <div className={styles.badge}>Next Steps</div>
+          <div className={styles.badge}>06. Next Steps</div>
           <h2 className={styles.title}>Let's Connect</h2>
           <p className={styles.description}>
-            I'm currently looking for an internship or junior role in digital marketing and analytics. 
-            Whether you want to chat about a potential opportunity or just talk marketing, 
+            I'm currently looking for an internship in SEO, paid search, or digital marketing analytics. 
+            Whether you want to chat about a potential opportunity or discuss the future of search, 
             I'd love to hear from you.
           </p>
           
