@@ -24,7 +24,7 @@ export default function Hero() {
             Ebru Sakar
           </h1>
           <h2 className={`${styles.subtitle} animate-delay-2`}>
-            Where search meets <span className={styles.accentText}>strategy</span> — from SEO to the AI-powered future of discovery.
+            Where search meets <span className={styles.accentText}>strategy</span> — from SEO to paid media.
           </h2>
           <p className={`${styles.description} animate-delay-3`}>
             I'm currently completing my Master's in Digital Marketing and Analytics in Barcelona.
@@ -73,14 +73,14 @@ export default function Hero() {
             <span>Analytics & Reporting</span>
           </div>
 
-          {/* Tag 4: GEO */}
+          {/* Tag 4: Performance Marketing */}
           <div className={`${styles.floatingTag} ${styles.tagGeo}`}>
             <div className={styles.tagIcon}>
                <svg viewBox="0 0 24 24" fill="none">
                  <path d="M13 10V3L4 14h7v7l9-11h-7z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                </svg>
             </div>
-            <span>GEO (Generative Engine Optimization)</span>
+            <span>Performance Marketing</span>
           </div>
 
         </div>
